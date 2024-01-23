@@ -46,5 +46,20 @@
             "isLoggedIn": false
         },
         "updatedAt": "2024-01-23 05:09:33.206394"
+    },
+    {
+        "001": {
+            "password": "dummy001",
+            "player1": "player0011",
+            "player2": "player0012",
+            "isLoggedIn": false
+        },
+        "002": {
+            "password": "dummy002",
+            "player1": "player0021",
+            "player2": "player0022",
+            "isLoggedIn": false
+        },
+        "updatedAt": "2024-01-23 06:18:24.005626"
     }
 ]
