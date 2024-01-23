@@ -6,7 +6,8 @@ from config import firestore_config
 teamDB = firestore_config.fsTeamDBName
 
 #ADD TEAM DATA TO FIRESTORE
-def fsAddTeamData(csv_file_path):
+def fsAddTeamData(csv_file_path, json_file_path):
+    csvToJson(csv_path, json_file_path)
     #get team data from csv file
     all_teams_data = csvToDict(csv_file_path)
     for team in all_teams_data:
@@ -19,5 +20,4 @@ def fsAddTeamData(csv_file_path):
 csv_path = firestore_config.teamCSV
 json_path = firestore_config.teamJSON
 if (__name__ == '__main__'):
-    csvToJson(csv_path, json_path)
-    fsAddTeamData(csv_path)
+    fsAddTeamData(csv_path, json_path)
