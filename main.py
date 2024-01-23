@@ -34,7 +34,7 @@ def fsAddTeamData(csv_file_path):
     for team in all_teams_data:
         #add team to firestore
         firestoreDB.collection(teamDB).document(team).set(all_teams_data[team])
-        print("Added team: " + team + " to firestore")
+        print("Added team " + team + " to firestore")
     #add team data to firestore
     csvToJson(all_teams_data, json_file_path)
     os.remove(csv_file_path)
@@ -50,7 +50,7 @@ def fsAddClueData(csv_file_path):
     for clue in all_clues_data:
         #add clue to firestore
         firestoreDB.collection(firestore_config.fsClueDBName).document(clue).set(all_clues_data[clue])
-        print("Added clue: " + clue + " to firestore")
+        print("Added clue " + clue + " to firestore")
     #add clue data to firestore
     csvToJson(all_clues_data, json_file_path)
     os.remove(csv_file_path)
