@@ -1,0 +1,50 @@
+[
+    {
+        "200": {
+            "password": "dummy200",
+            "player1": "test2001",
+            "player2": "test2002",
+            "isLoggedIn": false
+        },
+        "201": {
+            "password": "dummy201",
+            "player1": "test2011",
+            "player2": "test2012",
+            "isLoggedIn": false
+        },
+        "202": {
+            "password": "dummy202",
+            "player1": "test2021",
+            "player2": "test2022",
+            "isLoggedIn": false
+        },
+        "203": {
+            "password": "dummy203",
+            "player1": "test2031",
+            "player2": "test2032",
+            "isLoggedIn": false
+        },
+        "204": {
+            "password": "dummy204",
+            "player1": "test2041",
+            "player2": "test2042",
+            "isLoggedIn": false
+        },
+        "updatedAt": "2024-01-23 05:08:09.351547"
+    },
+    {
+        "199": {
+            "password": "dummy199",
+            "player1": "player1991",
+            "player2": "player1992",
+            "isLoggedIn": false
+        },
+        "198": {
+            "password": "dummy198",
+            "player1": "player1981",
+            "player2": "player1982",
+            "isLoggedIn": false
+        },
+        "updatedAt": "2024-01-23 05:09:33.206394"
+    }
+]
