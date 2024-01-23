@@ -1,0 +1,32 @@
+{
+    "200": {
+        "password": "dummy200",
+        "player1": "pytest2001",
+        "player2": "pytest2002",
+        "isLoggedIn": false
+    },
+    "201": {
+        "password": "dummy201",
+        "player1": "pytest2011",
+        "player2": "pytest2012",
+        "isLoggedIn": false
+    },
+    "202": {
+        "password": "dummy202",
+        "player1": "pytest2021",
+        "player2": "pytest2022",
+        "isLoggedIn": false
+    },
+    "203": {
+        "password": "dummy203",
+        "player1": "pytest2031",
+        "player2": "pytest2032",
+        "isLoggedIn": false
+    },
+    "204": {
+        "password": "dummy204",
+        "player1": "pytest2041",
+        "player2": "pytest2042",
+        "isLoggedIn": false
+    }
+}
