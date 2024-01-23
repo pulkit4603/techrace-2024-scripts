@@ -24,10 +24,10 @@ class MyHandler(LoggingEventHandler):
             print(f'File created: {event.src_path} running {self.function_to_run}') #@pulkit dumb logging
             self.function_to_run(event.src_path)
 
-#DEFINE FUNCTIONS TO RUN
+#DEFINE FUNCTIONS TO RUN:
 #Adds team data to firestore
 def fsAddTeamData(csv_file_path):
-    print("\ngay start FSADDTEAMDATA gay\n")
+    print("\nSTART FSADDTEAMDATA\n")
     json_file_path = firestore_config.teamJSON #customizable json file path
     #get team data from csv file
     all_teams_data = csvToDict(csv_file_path)
@@ -38,12 +38,30 @@ def fsAddTeamData(csv_file_path):
     #add team data to firestore
     csvToJson(csv_file_path, json_file_path)
     os.remove(csv_file_path)
-    print("\ngay end FSADDTEAMDATA gay\n")
+    print("\nEND FSADDTEAMDATA\n")
+    return
+
+#Adds clue data to firestore
+def fsAddClueData(csv_file_path):
+    print("\nSTART FSADDCLUEDATA\n")
+    json_file_path = firestore_config.clueJSON #customizable json file path
+    #get clue data from csv file
+    all_clues_data = csvToDict(csv_file_path)
+    for clue in all_clues_data:
+        #add clue to firestore
+        firestoreDB.collection(firestore_config.fsClueDBName).document(clue).set(all_clues_data[clue])
+        print("Added clue: " + clue + " to firestore")
+    #add clue data to firestore
+    csvToJson(csv_file_path, json_file_path)
+    os.remove(csv_file_path)
+    print("\nEND FSADDCLUEDATA\n")
     return
 
 #DEFINE DIRECTORIES TO WATCH & FUNCTIONS TO RUN
 watch_and_run = {
-    "./csv/firestoreTeamData": fsAddTeamData
+    "./csv/firestoreTeamData": fsAddTeamData,
+    "./csv/firestoreClueData": fsAddClueData,
+
 }
 
 #SCHEDULE WATCHDOG FOR EACH DIRECTORY
