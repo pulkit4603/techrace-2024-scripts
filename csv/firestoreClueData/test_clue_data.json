@@ -12,5 +12,19 @@
             "clueID": "3-2"
         },
         "updatedAt": "2024-01-23 18:35:49.260740"
+    },
+    {
+        "3-2": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "3-2"
+        },
+        "updatedAt": "2024-01-23 22:13:50.930256"
     }
 ]

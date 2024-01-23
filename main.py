@@ -5,11 +5,12 @@ import logging
 from config import firestore_config
 from utils.csv_to_dict import csvToDict
 from utils.csv_to_json import csvToJson
+from utils.password_generator import generate_password
 from model.firebase import firestoreDB
 teamDB = firestore_config.fsTeamDBName
 from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
-
+MODE = "DEV" #PROD or DEV
 
 class MyHandler(LoggingEventHandler):
     def __init__(self, function_to_run):
@@ -41,8 +42,9 @@ def fsAddTeamData(csv_file_path):
     print("\nEND FSADDTEAMDATA\n")
     return
 
-#Adds clue data to firestore
+#Adds clue data (and at the same time volunteer data) to firestore
 def fsAddClueData(csv_file_path):
+    volunteer = {}
     print("\nSTART FSADDCLUEDATA\n")
     json_file_path = firestore_config.clueJSON #customizable json file path
     #get clue data from csv file
@@ -50,6 +52,16 @@ def fsAddClueData(csv_file_path):
     for clue in all_clues_data:
         #add clue to firestore
         firestoreDB.collection(firestore_config.fsClueDBName).document(clue).set(all_clues_data[clue])
+
+        #set up volunteer data
+        volunteer = {
+            "targetLocationLatitude": all_clues_data[clue]["targetLocationLatitude"],
+            "targetLocationLongitude": all_clues_data[clue]["targetLocationLongitude"],
+            "isLoggedIn": False,
+            "password": generate_password(clue, True) if MODE == "DEV" else generate_password()
+            }
+        #add volunteer to firestore
+        firestoreDB.collection(firestore_config.fsVolunteerDBName).document(clue).set(volunteer)
         print("Added clue " + clue + " to firestore")
     #add clue data to firestore
     csvToJson(all_clues_data, json_file_path)
