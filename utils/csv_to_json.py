@@ -37,3 +37,4 @@ def csvToJson(csv_file_path, json_file_path):
     # Write the updated data back to the file
     with open(json_file_path, "w") as json_file:
         json.dump(data, json_file, indent=4)
+    return
