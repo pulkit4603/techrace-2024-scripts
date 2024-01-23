@@ -30,13 +30,13 @@ def fsAddTeamData(csv_file_path):
     print("\nSTART FSADDTEAMDATA\n")
     json_file_path = firestore_config.teamJSON #customizable json file path
     #get team data from csv file
-    all_teams_data = csvToDict(csv_file_path)
+    all_teams_data = csvToDict(csv_file_path, "teamID")
     for team in all_teams_data:
         #add team to firestore
         firestoreDB.collection(teamDB).document(team).set(all_teams_data[team])
         print("Added team: " + team + " to firestore")
     #add team data to firestore
-    csvToJson(csv_file_path, json_file_path)
+    csvToJson(all_teams_data, json_file_path)
     os.remove(csv_file_path)
     print("\nEND FSADDTEAMDATA\n")
     return
@@ -46,13 +46,13 @@ def fsAddClueData(csv_file_path):
     print("\nSTART FSADDCLUEDATA\n")
     json_file_path = firestore_config.clueJSON #customizable json file path
     #get clue data from csv file
-    all_clues_data = csvToDict(csv_file_path)
+    all_clues_data = csvToDict(csv_file_path, "clueID")
     for clue in all_clues_data:
         #add clue to firestore
         firestoreDB.collection(firestore_config.fsClueDBName).document(clue).set(all_clues_data[clue])
         print("Added clue: " + clue + " to firestore")
     #add clue data to firestore
-    csvToJson(csv_file_path, json_file_path)
+    csvToJson(all_clues_data, json_file_path)
     os.remove(csv_file_path)
     print("\nEND FSADDCLUEDATA\n")
     return
