@@ -2,6 +2,7 @@ import os
 import sys
 import time
 import logging
+from config.clue_routes import random_route
 from config import firestore_config
 from config import realtime_config
 from utils.csv_to_dict import csvToDict
@@ -40,6 +41,8 @@ def fsAddTeamData(csv_file_path):
         #get team data from csv file
         all_teams_data = csvToDict(csv_file_path, "teamID")
         for team in all_teams_data:
+            if all_teams_data[team]["player2"] == "":
+                all_teams_data[team].pop("player2")
             #add team to firestore
             firestoreDB.collection(teamDB).document(team).set(all_teams_data[team])
             print("Added team " + team + " to firestore")
@@ -91,6 +94,15 @@ def rtAddTeamData(csv_file_path):
         #get team data from csv file
         all_teams_data = csvToDict(csv_file_path, "teamID")
         for team in all_teams_data:
+            all_teams_data[team]["route"] = random_route()
+            all_teams_data[team]["balance"] = int(all_teams_data[team]["balance"])
+            all_teams_data[team]["currentClueIndex"] = int(all_teams_data[team]["currentClueIndex"])
+            all_teams_data[team]["extraLoc"] = int(all_teams_data[team]["extraLoc"])
+            all_teams_data[team]["isFrozen"] = False
+            all_teams_data[team]["isInvisible"] = False
+            all_teams_data[team]["isMeterOff"] = False
+            all_teams_data[team]["noSkipUsed"] = int(all_teams_data[team]["noSkipUsed"])
+            all_teams_data[team]["mystery"] = int(all_teams_data[team]["mystery"])
             #add team to realtime database
             realtimeTeamDB.child(team).set(all_teams_data[team])
             print("Added team " + team + " to realtime database")

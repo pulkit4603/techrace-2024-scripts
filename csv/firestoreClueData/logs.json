@@ -1,0 +1,82 @@
+[
+    {
+        "1-4": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "1-4"
+        },
+        "1-5": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "1-5"
+        },
+        "2-1": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "2-1"
+        },
+        "2-2": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "2-2"
+        },
+        "2-3": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "2-3"
+        },
+        "2-4": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "2-4"
+        },
+        "2-5": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "2-5"
+        },
+        "updatedAt": "2024-01-25 17:05:56.700255"
+    }
+]
