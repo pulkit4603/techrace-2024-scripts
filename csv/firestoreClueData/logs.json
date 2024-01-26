@@ -78,5 +78,19 @@
             "clueID": "2-5"
         },
         "updatedAt": "2024-01-25 17:05:56.700255"
+    },
+    {
+        "1-1": {
+            "clue": "test clue text",
+            "clueType": "text",
+            "hint1": "test hint 1",
+            "hint1Type": "text",
+            "hint2": "test hint 2",
+            "hint2Type": "type",
+            "targetLocationLongitude": "00.000000",
+            "targetLocationLatitude": "00.000000",
+            "clueID": "1-1"
+        },
+        "updatedAt": "2024-01-27 00:03:08.540004"
     }
 ]
