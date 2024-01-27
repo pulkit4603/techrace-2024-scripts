@@ -7,7 +7,8 @@ This Python automation script watches specific directories for new CSV files and
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 <h3>Prerequisites</h3>
-You need Python 3.x and mainly the following Python packages:\n
+You need Python 3.x and mainly the following Python packages:
+
     - watchdog
     - firebase_admin
 
