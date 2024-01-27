@@ -13,16 +13,16 @@ You need Python 3.x and mainly the following Python packages:
 
 You can install the packages required by this repository using pip:
 
-    `pip install -r requirements.txt`
+    pip install -r requirements.txt
 
 <h3>Installing</h3>
 <h5>Clone the repository to your local machine:</h5>
 
-    `git clone {code url of this repository}`
+    git clone {code url of this repository}
 
 <h5>Run the script:</h5>
 
-    `python main.py`
+    python main.py
 
 <h3>Usage</h3>
 The script watches the following directories for new CSV files:
