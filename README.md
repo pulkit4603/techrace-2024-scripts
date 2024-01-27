@@ -12,16 +12,17 @@ You need Python 3.x and mainly the following Python packages:
     - firebase_admin
 
 You can install the packages required by this repository using pip:
-`pip install -r requirements.txt`
+
+    `pip install -r requirements.txt`
 
 <h3>Installing</h3>
 <h5>Clone the repository to your local machine:</h5>
-    ```
-    git clone {url of this repo}
-    ```
+
+    `git clone {code url of this repository}`
 
 <h5>Run the script:</h5>
-    python main.py
+
+    `python main.py`
 
 <h3>Usage</h3>
 The script watches the following directories for new CSV files:
@@ -35,8 +36,5 @@ When a new CSV file is added to one of these directories, the script reads the d
 Python - The programming language used
 Firebase - The database used
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details
-
-Acknowledgments
-Hat tip to anyone whose code was used
+<h3>License</h3>
+This project is licensed under the MIT License.
