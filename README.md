@@ -1,5 +1,5 @@
 <h2>TECHRACE 2024 SCRIPTS</h2>
-[A repository of the automation scripts used in development of the official 2024 Techrace App]
+[This repository of automation scripts used in development of the official 2024 Techrace App]
 
 This Python automation script watches specific directories for new CSV files and uses the data in these files to populate Firebase databases.
 
@@ -34,7 +34,7 @@ The script watches the following directories for new CSV files:
 When a new CSV file is added to one of these directories, the script reads the data from the file and adds it to the corresponding Firebase database.
 
 <h3>Built With</h3>
-Python - The programming language used
+Python - The programming language used <br>
 Firebase - The database used
 
 <h3>License</h3>
